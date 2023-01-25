@@ -9,16 +9,14 @@ speler2 = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54
 
-scorers = f'{speler1} {goal_0}, {speler2} {goal_1}'
-
+scorers = speler1 + ' ' + str(goal_0) + ', ' + speler2 + ' ' + str(goal_1)
 report = f"{speler1} scored in the {goal_0}nd minute\n{speler2} scored in the {goal_1}th minute"
 
 player = 'Ruud Gullit'
-first_name = (player[:4])
-last_name_len = (len(player[5:]))
-name_short = (f"R. {(player[5:])}")
+first_name = player[:player.find(' ')]
+last_name_len = len(player[player.find(' '):-1])
+name_short = player[:1] + '.' + player[player.find(' '):]
 chant = (f"{first_name}! "*4 ).rstrip()
-#good_chant = (chant!= [ ])
-good_chant = ((chant[-1]) != [ ])
+good_chant = ((chant[-1]) !='')
 print (good_chant)
 
